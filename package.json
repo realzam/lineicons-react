@@ -11,7 +11,31 @@
   "peerDependencies": {
     "react": ">16.0.0"
   },
+  "author": "Lineicons <support@lineicons.com> (https://lineicons.com/)",
+  "homepage": "https://lineicons.com/",
   "license": "MIT",
+  "keywords": [
+    "icons",
+    "lineicons",
+    "line-icons",
+    "svg",
+    "icon-fonts",
+    "fontawesome",
+    "icon-pack",
+    "web-fonts",
+    "ui-icons",
+    "fill-icons",
+    "vector-icons",
+    "react",
+    "react-icons",
+    "iconography",
+    "flat-icons",
+    "simple-line-icons",
+    "brand-icons",
+    "symbol-icons",
+    "web-icons",
+    "icon-set"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/compat-data": "^7.14.5",
@@ -39,7 +63,7 @@
   "dependencies": {
     "prop-types": "^15.7.2"
   },
-  "description": "A React Component for [Lineicons](https://lineicons.com)",
+  "description": "Lineicons React - Essential UI Icons for React | React Component for [Lineicons](https://lineicons.com)",
   "directories": {
     "example": "example"
   },
@@ -47,10 +71,6 @@
     "type": "git",
     "url": "git+https://github.com/LineiconsHQ/lineicons-react.git"
   },
-  "keywords": [],
-  "author": "",
   "bugs": {
     "url": "https://github.com/LineiconsHQ/lineicons-react/issues"
-  },
-  "homepage": "https://github.com/LineiconsHQ/lineicons-react#readme"
-}
+  }
