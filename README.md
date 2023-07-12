@@ -22,7 +22,7 @@ yarn add lineicons-react
 
 ## Usage
 
-**Using SVG icons**
+### Using SVG icons
 To use a SVG icon all you have to do is import it from **lineicons-react** and use it as shown below.
 
 ```js
@@ -39,7 +39,7 @@ function App() {
 export default App;
 ```
 
-**Using Icon Font**
+### Using Icon Font
 To use the Icon Font first import the CSS file into your Index.js file
 
 ```js
