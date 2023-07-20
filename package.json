@@ -1,17 +1,20 @@
 {
   "name": "lineicons-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types":"dist/types/index.d.ts",
   "files": [
-    "dist",
-    "lineicons"
+    "dist"
   ],
   "scripts": {
-    "pkg:prebuild": "rimraf dist",
-    "pkg:build": "rollup -c --bundleConfigAsCjs",
-    "svgr": "svgr --icon --title-prop --typescript -d src/svgs assets"
+    "pkg:prebuild": "rimraf dist && rimraf scr/svgs",
+    "svgr": "svgr --icon --title-prop --typescript -d src/svgs assets/svgs",
+    "rename": "node ./src/scripts/rename.js",
+    "export": "node ./src/scripts/export.js",
+    "build:svg": "tsc --declaration --emitDeclarationOnly && esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --tsconfig=tsconfig.json",
+    "build:webfonts": "webpack",
+    "build": " concurrently \"npm run build:webfonts\" \"npm run build:svg\""
   },
   "peerDependencies": {
     "react": ">16.0.0"
@@ -42,16 +45,18 @@
     "icon-set"
   ],
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.2",
-    "@rollup/plugin-node-resolve": "^15.1.0",
     "@svgr/cli": "^8.0.1",
     "@types/react": "^18.2.14",
+    "concurrently": "^8.2.0",
+    "css-loader": "^6.8.1",
+    "esbuild": "^0.18.13",
     "react": "^18.2.0",
     "rimraf": "^5.0.1",
-    "rollup": "^3.26.2",
-    "rollup-plugin-filesize": "^10.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.35.0"
+    "style-loader": "^3.3.3",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "mini-css-extract-plugin": "^2.7.6"
   },
   "description": "Lineicons React - Essential UI Icons for React | React Component for [Lineicons](https://lineicons.com)",
   "directories": {
